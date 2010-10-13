@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Drag Drop Delegate With Dynamic Items</title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+<script type="text/javascript" >
+/* Initial items to add to list */
+var userConfig = {
+    items : [
+        {   my_id : 1,
+            label : "Item 01",
+        },
+        {   my_id : 2,
+            label : "Item 02",
+        },
+        {   my_id : 3,
+            label : "Phase 1: Collect underpants",
+        },
+        {   my_id : 4,
+            label : "Phase 2: ?",
+        },
+        {   my_id : 5,
+            label : "Phase 3: Profit!",
+        }
+    ]
+}
+</script>
+<script type="text/javascript" src="http://yui.yahooapis.com/3.2.0/build/yui/yui-min.js"></script>
+<script type="text/javascript" src="src/app.js"> </script>
+<script type="text/javascript" src="src/dd.js"> </script>
+
+</head>
+
+<body id="home">
+
+<div class="info-panel">
+
+</div>
+
+<div class="head">
+	<div class="head-inner">
+        <h1>Drag Drop Delegate With Dynamic Items</h1>
+    </div>
+</div><!-- head ends -->
+
+<div class="container">
+
+	<div class="column1">
+        <div class="column1-contents">
+
+            <div class="project-head">
+                <h2>List 1</h2>
+                <a class="new-item" href="#" title="Add new item">Add new item</a>
+            </div>
+            
+        </div><!-- column1-contents ends -->
+    </div><!-- column1 ends -->
+
+</div><!-- container ends -->
+
+<div id="console" class="yui3-skin-sam  yui-skin-sam"></div>
+
+</body>
+</html>
