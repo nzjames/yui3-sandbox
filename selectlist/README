@@ -1,3 +1,5 @@
 * An exmaple app that uses the node focus manager with dynamic nodes being added into the target list
 * The list and the nodes are (quite) simple custom widgets.
 * version 0 of my template pattern is being used on the widgets
+
+Demo: http://nzjames.com/yui3-sandbox/selectlist/
