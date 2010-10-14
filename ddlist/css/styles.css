@@ -36,6 +36,10 @@ h4 {
 	font-weight: normal;
 	}
 
+.head-inner h3 {
+    margin: 7px 0 0 15px;
+}
+
 :focus {
 	outline: none;
 	}	
@@ -77,6 +81,8 @@ input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner
 	width:100%;
 	z-index: 4;
 }
+
+
 .content-block {
 	padding: 0 0 20px;
 	margin: 0 0 20px;

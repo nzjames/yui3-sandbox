@@ -75,7 +75,6 @@ Y.use('dd-constrain', 'dd-proxy', 'dd-drop', 'dd-delegate', 'dd-drop-plugin', fu
         nodes: 'tr.list-content',
         target: true
     });
-    d =del;
     del.dd.plug(Y.Plugin.DDConstrained, {
         constrain2node: '#itemlist',
         sticky: true 
@@ -83,4 +82,7 @@ Y.use('dd-constrain', 'dd-proxy', 'dd-drop', 'dd-delegate', 'dd-drop-plugin', fu
     del.dd.plug(Y.Plugin.DDProxy, {
             moveOnEnd: false
         });
+    // Global Access to the delegate object for debugging 
+    d = del;
+ 
 });
