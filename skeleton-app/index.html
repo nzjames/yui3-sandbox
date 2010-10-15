@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Skeleton App</title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+<script type="text/javascript" src="http://yui.yahooapis.com/3.2.0/build/yui/yui-min.js"></script>
+<script type="text/javascript" src="src/app.js"> </script>
+<script>
+Y =  YUI({ 
+        modules: {
+            "mod1": {
+                fullpath: "src/mod1.js",
+                requires: ["widget", "widget-parent"]
+            }, 
+            "app": {
+                fullpath: "src/app.js",
+                requires: ["base-base", "mod1"]
+            }
+        }
+     }).use('app', function(Y) {
+        (new Y.Skeleton.App({
+            //"eventsResourcePath": "events/"
+        }));
+
+    });
+</script>
+
+</head>
+
+<body id="app">
+
+<div class="head">
+	<div class="head-inner">
+        <h1>Skeleton App</h1>
+        <h3>On git hub <a href="http://github.com/nzjames/yui3-sandbox/tree/master/skeleton-app/">http://github.com/nzjames/yui3-sandbox/tree/master/skeleton-app/</a></h3>
+    </div>
+</div><!-- head ends -->
+
+<div class="container">
+
+	<div class="column1">
+        <div class="column1-contents">
+
+        </div><!-- column1-contents ends -->
+    </div><!-- column1 ends -->
+
+</div><!-- container ends -->
+
+<div id="console" class="yui3-skin-sam  yui-skin-sam"></div>
+
+</body>
+</html>
