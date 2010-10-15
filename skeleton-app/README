@@ -1,2 +1,4 @@
 * A skeleton App that is using widgets which are wired together by a top level module 
 * copied from the Yahoo Logismo architecture http://gist.github.com/228240
+
+Currenly handling events at the top level but only logging to the console.
