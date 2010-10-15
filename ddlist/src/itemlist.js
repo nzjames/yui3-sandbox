@@ -5,14 +5,6 @@ Y.ItemList = Y.Base.create("itemlist", Y.Widget, [Y.WidgetParent, Y.WidgetChild]
     BOUNDING_TEMPLATE : Y.template.itemList.BOUNDING,
     CONTENT_TEMPLATE : Y.template.itemList.CONTENT,
 
-    bindUI: function() {
-
-    },
-
-    renderUI: function () {
-
-    }
-
 }, { 
     ATTRS : {
         defaultChildType: {  
@@ -43,9 +35,12 @@ Y.Item = Y.Base.create("item", Y.Widget, [Y.WidgetChild], {
 
     bindUI: function () {
 
-        this.on("item:mousedown", function (event) {
-
-        });
+        // We need to call this when a new Item is added,
+        // but the DD isn't setup yet.
+        // This is what we need custom events for that we can wire up at the 
+        // top level
+        //this.get('parent').get('boundingBox').delegate.syncTargets();
+        Y.log(this.get('parent').get('boundingBox'));
 
     },
 

@@ -20,6 +20,7 @@ Y.use('dd-constrain', 'dd-proxy', 'dd-drop', 'dd-delegate', 'dd-drop-plugin', fu
             e.drop.sizeShim();
         }
     });
+
     //Listen for all drag:drag events
     Y.DD.DDM.on('drag:drag', function(e) {
         //Get the last y point
@@ -70,19 +71,18 @@ Y.use('dd-constrain', 'dd-proxy', 'dd-drop', 'dd-delegate', 'dd-drop-plugin', fu
     //Static Vars
     var goingUp = false, lastY = 0;
 
-    var del = new Y.DD.Delegate({
+    Y.ddlist.itemList.delegate = new Y.DD.Delegate({
         cont: '.list-table',
         nodes: 'tr.list-content',
         target: true
     });
-    del.dd.plug(Y.Plugin.DDConstrained, {
+
+    Y.ddlist.itemList.delegate.dd.plug(Y.Plugin.DDConstrained, {
         constrain2node: '#itemlist',
         sticky: true 
     });
-    del.dd.plug(Y.Plugin.DDProxy, {
+    Y.ddlist.itemList.delegate.dd.plug(Y.Plugin.DDProxy, {
             moveOnEnd: false
         });
-    // Global Access to the delegate object for debugging 
-    d = del;
  
 });
